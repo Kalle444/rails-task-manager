@@ -1,0 +1,13 @@
+<h1>Your TO-DO list:</h1>
+
+<h2><%= link_to "Add a new task", new_task_path %></h2>
+<h4>----------------------------------------------------</h4>
+
+<% @tasks.each do |task| %>
+  <%=  link_to task_path(task) do %>
+  <h3><%=  " #{task.id} #{task.name} "%></h3>
+  <% end %>
+  <h4><%= link_to "Edit the task", edit_task_path(task)%></h4>
+    <h4><%= link_to "Delete the task", task_path(task), method: "delete"%></h4>
+    <h4>----------------------------------------------------</h4>
+<% end %>
