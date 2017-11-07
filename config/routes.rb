@@ -13,6 +13,9 @@ Rails.application.routes.draw do
 
   # # DELETE
   # delete 'tasks/:id',   to: "tasks#destroy"
+
+  root 'tasks#index'
+
   resources :tasks
 end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
